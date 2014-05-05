@@ -3,3 +3,4 @@ function list(req, res) {
 }
 exports.list = list;
 ;
+//# sourceMappingURL=user.js.map

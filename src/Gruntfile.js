@@ -10,23 +10,24 @@ module.exports = function (grunt) {
         watch:{
             server: {
                 files: serverFiles,
-                tasks: ['ts:server'],
+                tasks: ['ts:server']
             },
             client: {
                 files: clientFiles,
-                tasks: ['ts:client'],
+                tasks: ['ts:client']
             }
         },
 
         ts: {
 
             options: {
-                sourceMap: false,
+                sourceMap: true,
                 comments: false,               // same as !removeComments. [true | false (default)]
                 target: 'es5',                 // target javascript language. [es3 (default) | es5]
                 module: 'amd',                 // target javascript module style. [amd (default) | commonjs]                
                 declaration: false,            // generate a declaration .d.ts file for every output js file. [true | false (default)]
-                fast: true,
+                fast: "never",
+                reference: "./tsreference.js"
             },
 
             server: {                
@@ -34,8 +35,9 @@ module.exports = function (grunt) {
                 outDir: '../fullstack',
                 baseDir: '.',
                 options: {
-                    module: 'commonjs',
-                },
+                    module: 'commonjs'
+
+                }
             },
 
             client: {                
@@ -44,16 +46,17 @@ module.exports = function (grunt) {
                 baseDir: '.',
                 options: {
                     module: 'amd',
-                },
-            },
+                    target: 'es3'
+                }
+            }
 
         },
 
         concurrent: {
             options: {
-                logConcurrentOutput: true,
+                logConcurrentOutput: true
             },
-            fullstack: ['ts:server', 'ts:client'],
+            fullstack: ['ts:server', 'ts:client']
         }
 
     });

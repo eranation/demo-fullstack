@@ -52,3 +52,4 @@ app.use(function (err, req, res, next) {
 exports.server = app.listen(3000, function () {
     console.log('Listening on port %d', exports.server.address().port);
 });
+//# sourceMappingURL=server.js.map
