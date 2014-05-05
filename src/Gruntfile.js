@@ -27,7 +27,9 @@ module.exports = function (grunt) {
                 module: 'amd',                 // target javascript module style. [amd (default) | commonjs]                
                 declaration: false,            // generate a declaration .d.ts file for every output js file. [true | false (default)]
                 fast: "never",
-                reference: "./tsreference.js"
+                reference: "./tsreference.js",
+                //sourceRoot: "file:///Users/eranmedan/demo-fullstack"
+                //sourceRoot: ""
             },
 
             server: {                

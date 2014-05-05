@@ -1,4 +1,4 @@
-define(["require", "exports", '../common/Sayings'], function(require, exports, Sayings) {
+define(["require", "exports", '../common/Sayings', "jquery"], function(require, exports, Sayings, $) {
     console.log(new Sayings.Greeter("from client3!").greet());
 
     var greeter = new Sayings.Greeter("world4");
@@ -9,13 +9,12 @@ define(["require", "exports", '../common/Sayings'], function(require, exports, S
         return alert(greeter.greet());
     };
 
-    window.addEventListener("load", function (event) {
-        alert("loaded" + event.target);
+    $(document).ready(function () {
         document.body.appendChild(button);
         var element = document.querySelector("#test");
         element.style.borderColor = "blue";
         element.onmouseover = function (event) {
-            alert(event.altKey);
+            element.innerHTML += greeter.greet() + "test5 " + event.altKey + " " + event.ctrlKey + "<br>";
         };
     });
 
