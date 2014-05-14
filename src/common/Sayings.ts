@@ -5,7 +5,7 @@ module Sayings {
       this.greeting = message;
     }
     greet() {
-      return "Hello, " + this.greeting;
+      return "Hello4, " + this.greeting;
     }
   }
 }
