@@ -5,13 +5,13 @@ import Sayings = require('../common/Sayings'); ///ts:import:generated
 
 import $ = require("jquery");
 
-console.log(new Sayings.Greeter("from client12!").greet());
+console.log(new Sayings.Greeter("from client13!").greet(2));
 
 var greeter = new Sayings.Greeter("world4");
 
 var button = document.createElement('button');
 button.textContent = "Say Hello";
-button.onclick = () => alert(greeter.greet());
+button.onclick = () => alert(greeter.greet(3));
 
 $(document).ready(()=>{
   //console.log(event);
@@ -20,7 +20,7 @@ $(document).ready(()=>{
   var element = <HTMLElement>document.querySelector("#test");
   element.style.borderColor = "blue";
   element.onmouseover = (event:MouseEvent) => {
-    element.innerHTML += greeter.greet() + "test5 " + event.altKey + " " + event.ctrlKey + "<br>";
+    element.innerHTML += greeter.greet(4) + "test5 " + event.altKey + " " + event.ctrlKey + "<br>";
   }
 });
 //window.addEventListener( "load", ()=> alert("loaded2"), false );
@@ -34,5 +34,5 @@ $(document).ready(()=>{
 var result = [1,2,3,4,5].map((val, index) => val * 2);
 console.log(result);
 
-alert(greeter.greet());
+alert(greeter.greet(2));
 

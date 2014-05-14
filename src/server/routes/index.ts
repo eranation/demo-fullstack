@@ -8,6 +8,6 @@ import express = require('express');
 export function index(req:express.Request, res:express.Response) {
     var name = req.query.name;
     var greeter = new Sayings.Greeter(name?name : "guest");
-    res.render('index', { title: greeter.greet() });
+    res.render('index', { title: greeter.greet(10) });
 };
 

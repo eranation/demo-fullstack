@@ -4,8 +4,9 @@ module Sayings {
     constructor(message: string) {
       this.greeting = message;
     }
-    greet() {
-      return "Hello4, " + this.greeting;
+    greet(times: number, foo?:boolean, bar:string = "test") {
+      return Array(times + 1).join(this.greeting);
+      //return "Hello5, " + this.greeting;
     }
   }
 }
