@@ -5,7 +5,7 @@ import Sayings = require('../common/Sayings'); ///ts:import:generated
 
 import $ = require("jquery");
 
-console.log(new Sayings.Greeter("from client3!").greet());
+console.log(new Sayings.Greeter("from client12!").greet());
 
 var greeter = new Sayings.Greeter("world4");
 

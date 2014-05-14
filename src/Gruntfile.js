@@ -25,7 +25,7 @@ module.exports = function (grunt) {
                 comments: false,               // same as !removeComments. [true | false (default)]
                 target: 'es5',                 // target javascript language. [es3 (default) | es5]
                 module: 'amd',                 // target javascript module style. [amd (default) | commonjs]                
-                declaration: false,            // generate a declaration .d.ts file for every output js file. [true | false (default)]
+              //  declaration: true,            // generate a declaration .d.ts file for every output js file. [true | false (default)]
                 fast: "never",
                 reference: "./tsreference.js",
                 //sourceRoot: "file:///Users/eranmedan/demo-fullstack"
@@ -34,7 +34,7 @@ module.exports = function (grunt) {
 
             server: {                
                 src: serverFiles,
-                outDir: '../fullstack',
+                outDir: '../dist',
                 baseDir: '.',
                 options: {
                     module: 'commonjs'
@@ -44,7 +44,7 @@ module.exports = function (grunt) {
 
             client: {                
                 src: clientFiles,
-                outDir: '../fullstack/server/public/js',
+                outDir: '../dist/server/public/js',
                 baseDir: '.',
                 options: {
                     module: 'amd',
